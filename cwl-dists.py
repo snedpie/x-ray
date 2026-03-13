@@ -3,6 +3,19 @@ from datetime import datetime, timedelta
 from openpyxl import load_workbook
 from openpyxl.utils import get_column_letter
 
+immunities = [
+    # Permanent immunities are players who are members of Leadership as well as known alts; they cannot be kicked. 
+    "Sned",
+    "Sned 2.0",
+    "BumblinMumbler",
+    "BumblinMumbler2",
+    "Ascended", 
+    "Smitty™", 
+    "Ligma", 
+    "CrazyWaveIT", 
+    "skyeshade"
+]
+
 # Constants
 WINNERS_LOG_FILE = "./outputs/winners_log.json"
 INPUT_FILE = "./inputs/cwl-input.txt"
@@ -66,12 +79,16 @@ def build_entries(players, bypass:bool=False):
 
         # If player has zero or hits, write in "./strikes/cwl_{month}.txt" and then remove them from the list. 
         if adjusted_hits <= 0:
+            players[i] = (player, 0)
+
+            # If they are not immune... 
+            if player in immunities: continue 
+
             month_year = datetime.today().strftime("%Y-%m")
             strikes_file = f"./strikes/cwl-{month_year}.txt"
             date = datetime.today().strftime("%Y-%m-%d")
             with open(strikes_file, 'a', encoding='utf-8') as strikes_f:
                 strikes_f.write(f"3\n{player}\ny\n7\n{date}\n")
-            players[i] = (player, 0)
 
     entries = []
     for player, hits in players:
@@ -311,12 +328,12 @@ def draw_command(available_distributions:int, bypass:bool):
             remaining = BASE_PENALTY_WEEKS - elapsed - bonus
             ineligible_players.append((player, elapsed, bonus, remaining))
 
-    track = pity_track(players, ineligible_players)
-    # For each player in the pity track, if their value is set to TRUE, their entries must double 
-    for i, (player, hits) in enumerate(players):
-        if track.get(player):
-            print(f"Pity track: Doubling entries for {player} who has {hits} hits.")
-            players[i] = (player, hits * 2)
+    # track = pity_track(players, ineligible_players)
+    # # For each player in the pity track, if their value is set to TRUE, their entries must double 
+    # for i, (player, hits) in enumerate(players):
+    #     if track.get(player):
+    #         print(f"Pity track: Doubling entries for {player} who has {hits} hits.")
+    #         players[i] = (player, hits * 2)
 
     # Sort by threshold ascending. Those with the least time remaining are listed first.
     ineligible_players.sort(key=lambda x: x[3])

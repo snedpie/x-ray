@@ -113,8 +113,8 @@ def print_verbatim_list(title: str, names: Sequence[str]) -> None:
     if not names:
         print("  (none)")
         return
-    for n in names:
-        print(f"  - {n}")
+    for ind,n in enumerate(names):
+        print(f"  {ind+1}. {n}")
 
 
 def prompt_choice() -> str:
@@ -558,8 +558,8 @@ def pick_midweek_swap(
 # Output
 # ---------------------------
 
-def write_output(out_path: Path, mode: str, roster: List[str], benched: List[str], notes: List[str]) -> None:
-    out_path.parent.mkdir(parents=True, exist_ok=True)
+def write_output(out_path: str, mode: str, roster: List[str], benched: List[str], notes: List[str]) -> None:
+    out_path = Path(out_path).expanduser().resolve()
     with out_path.open("w", encoding="utf-8") as f:
         f.write(f"MODE: {mode}\n")
         f.write("\nNOTES:\n")
@@ -578,42 +578,23 @@ def write_output(out_path: Path, mode: str, roster: List[str], benched: List[str
 # ---------------------------
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="CWL roster selection helper (30-player roster).")
-    parser.add_argument("-i", "--input", required=True, help="Path to CWL signups Excel workbook (.xlsx).")
-    parser.add_argument("-o", "--output-prefix", default="cwl", help="Output filename prefix (default: cwl).")
-    parser.add_argument("--output-dir", default=None, help="Output directory (default: ./outputs or next to input).")
-    parser.add_argument("-s", "--seed", default=None, help="Random seed for reproducible picks (optional).")
-    parser.add_argument("--mode", choices=["begin", "swap"], default=None, help="Skip prompt and force a mode.")
-    parser.add_argument("--status", default=None, help="(swap mode) Path to status CSV/TSV file with stars (and optional roster flags).")
-    args = parser.parse_args()
 
-    input_path = Path(args.input).expanduser().resolve()
+    input_path = Path("./inputs/cwl-responses.xlsx").expanduser().resolve()
     df = load_signups(input_path)
     pools = build_pools(df)
 
-    seed = args.seed
-    if seed is None:
-        # deterministic-ish seed from system entropy; still reproducible if user passes -s
-        rng = random.Random()
-    else:
-        rng = random.Random(str(seed))
-
-    mode = args.mode or prompt_choice()
+    rng = random.Random()
+    mode = prompt_choice()
 
     notes: List[str] = []
     notes.append(f"Signup file: {input_path.name}")
-    if seed is not None:
-        notes.append(f"Seed: {seed}")
 
     if mode == "begin":
         roster, benched, more_notes = pick_beginning_of_week(pools, rng)
         notes.extend(more_notes)
     else:
-        status_path = Path(args.status).expanduser().resolve() if args.status else None
-        if status_path is None:
-            print()
-            status_in = input("Enter path to status file (CSV/TSV): ").strip()
-            status_path = Path(status_in).expanduser().resolve()
+        status_in = input("Enter path to status file (CSV/TSV): ").strip()
+        status_path = Path(status_in).expanduser().resolve()
 
         stars_by_name, current_roster = load_status_file(status_path, pools.name_index, expected_total_signups=len(pools.all_names))
         notes.append(f"Status file: {status_path.name}")
@@ -627,12 +608,11 @@ def main() -> None:
     print_verbatim_list("FINAL ROSTER (rostered players):", roster)
     print_verbatim_list("BENCHED / NOT ROSTERED:", benched)
 
-    out_dir = choose_output_dir(input_path, Path(args.output_dir).expanduser().resolve() if args.output_dir else None)
-    out_path = out_dir / f"{args.output_prefix}_roster.txt"
+    out_path = f"./outputs/cwl_roster.txt"
     write_output(out_path, mode=mode, roster=roster, benched=benched, notes=notes)
 
     print()
-    print(f"Wrote output to: {out_path.resolve()}")
+    print(f"Wrote output to: {out_path}")
 
 
 if __name__ == "__main__":

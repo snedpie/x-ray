@@ -68,12 +68,12 @@ def find_missing_members(xray_df: pd.DataFrame, cwl_df: pd.DataFrame):
     """
 
     valid_xray = xray_df[
-        xray_df["Clan"].notna() &
-        xray_df["Clan"].astype(str).str.strip().ne("")
+        xray_df["CLAN"].notna() &
+        xray_df["CLAN"].astype(str).str.strip().ne("")
     ]
 
     xray_names = (
-        valid_xray["Name"]
+        valid_xray["NAME"]
         .dropna()
         .astype(str)
         .str.strip()
@@ -143,7 +143,7 @@ def main():
         return
     
     # Check that required columns exist
-    if "Name" not in xray_df.columns:
+    if "NAME" not in xray_df.columns:
         print("Error: 'Name' column not found in xray-members.xlsx")
         return
     if "In-Game Name" not in cwl_df.columns:
