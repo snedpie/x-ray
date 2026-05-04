@@ -2,46 +2,47 @@ MODE: begin
 
 NOTES:
 - Signup file: cwl-responses.xlsx
-- Included all '8 stars only': 6
-- Randomly selected from 'All 7 wars': 24 (seeded)
+- Included all '8 stars only': 7
+- Randomly selected from 'All 7 wars': 20 (seeded)
+- Filled remaining slots from 'Standby / bench': 3
 
 FINAL ROSTER (30):
 - BB Crazy
-- Sned
 - BumblinMumbler
+- Ratchet
+- Sned
 - Taycid
 - Genghis Khan
 - Dr. Stone
-- Smitty
-- Marlec
-- Protips
-- ⚡TANJIRO⚡
-- Erdnussflip
-- Ascended
-- IamGroOt
-- osiris8282
-- DNG
-- Koshal
-- Welli
-- Rod
-- Truthful Lies
-- pg
-- CrazyWaveIT
-- Satan
 - Redking
-- Vojt
-- K.L.A.U.S
+- Marlec
+- God Sukuna
+- ÍâmGrøØt
+- S4VAGE_B5
+- Smitty
+- Protips
+- Welli
+- DNG
 - Rious
+- CrazyWaveIT
+- K.L.A.U.S
+- RoyalOne
+- ⚡TANJIRO⚡
+- Vojt
+- osiris8282
+- Rod
+- Ascended
+- Koshal
+- Truthful Lies
+- beeche
+- Hype
+- your mama
 
 BENCHED / NOT ROSTERED:
-- RoyalOne
-- S4VAGEB5
 - Carsonn
 - Jy
 - gdfan75
 - Matanza
 - shadow
-- Hype
-- your mama
 - Skyeshade
 - BumblinMumbler2

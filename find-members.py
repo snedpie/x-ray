@@ -114,6 +114,68 @@ def find_missing_members(xray_df: pd.DataFrame, cwl_df: pd.DataFrame):
 
     return missing_names
 
+def find_bad_entries(xray_df: pd.DataFrame, cwl_df: pd.DataFrame):
+    """
+    Identify X-ray "Name" entries that are NOT present in CWL "In-Game Name" entries.
+
+    Matching is done case-insensitively on the 'Name' column from X-ray members
+    and the 'In-Game Name' column from CWL responses.
+
+    Args:
+        xray_df (pd.DataFrame): DataFrame of X-ray members (must have column 'Name')
+        cwl_df  (pd.DataFrame): DataFrame of CWL responses (must have column 'In-Game Name')
+
+    Returns:
+        bad_entries (set of str): Set of X-ray Names not found in CWL In-Game Names
+    """
+
+    valid_xray = xray_df[
+        xray_df["CLAN"].notna() &
+        xray_df["CLAN"].astype(str).str.strip().ne("")
+    ]
+
+    xray_names = (
+        valid_xray["NAME"]
+        .dropna()
+        .astype(str)
+        .str.strip()
+        .str.lower()
+        .unique()
+    )
+    
+    cwl_names = (
+        cwl_df["In-Game Name"]
+        .dropna()
+        .astype(str)
+        .str.strip()
+        .str.lower()
+        .unique()
+    )
+    
+    # Convert to Python sets for fast membership testing
+    xray_name_set = set(xray_names)
+    cwl_name_set  = set(cwl_names)
+    
+    # Find all X-ray names that are not in CWL In-Game Names
+    bad_entries = set()
+
+    for xray_name in xray_names:
+        # exact case-insensitive match first
+        if xray_name in cwl_name_set:
+            continue
+
+        # --- NEW: fuzzy check against ALL CWL names
+        # take minimum edit distance; if < 3, treat as matched
+        min_dist = min(_levenshtein(xray_name, cname) for cname in cwl_names)
+        if min_dist < 3:
+            # close enough, don't mark as bad
+            continue
+
+        # if we got here, it's genuinely missing
+        bad_entries.add(xray_name)
+
+    return bad_entries
+
 # If a file exists called "Reddit X-ray [Discord Members].xlsx", delete "xray-members.xlsx" and rename that file to "xray-members.xlsx"
 # If a file exists called "X-ray CWL Participation Form (Responses).xlsx", delete "cwl-responses.xlsx" and rename that file to "cwl-responses.xlsx"
 def rename_input(): 
@@ -160,6 +222,15 @@ def main():
             print(f"{idx}. {name}")
     else:
         print("All CWL In-Game Names are present in the X-ray members list.")
+
+    missing = find_bad_entries(xray_df, cwl_df)
+
+    if missing:
+        print("\nX-ray Names not found among CWL In-Game Names (case-insensitive):")
+        for idx, name in enumerate(sorted(missing), 1):
+            print(f"{idx}. {name}")
+    else:
+        print("All X-ray Names are present in the CWL In-Game Names list.")
     
     # Optionally, save to a CSV for record-keeping
     # Uncomment below lines if you want to export the missing names to a file.
