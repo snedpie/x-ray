@@ -48,74 +48,10 @@
             {
                 "month": "2026-03",
                 "bonus_weeks": 2
-            }
-        ]
-    },
-    "Dr. Stone": {
-        "win_date": "2026-01-11",
-        "bonus": [
-            {
-                "month": "2026-02",
-                "bonus_weeks": 4
             },
             {
-                "month": "2026-03",
-                "bonus_weeks": 4
-            },
-            {
-                "month": "2026-04",
-                "bonus_weeks": 4
-            }
-        ]
-    },
-    "Vojt": {
-        "win_date": "2026-01-11",
-        "bonus": [
-            {
-                "month": "2026-02",
-                "bonus_weeks": 4
-            },
-            {
-                "month": "2026-03",
-                "bonus_weeks": 4
-            },
-            {
-                "month": "2026-04",
-                "bonus_weeks": 4
-            }
-        ]
-    },
-    "Protips": {
-        "win_date": "2026-01-11",
-        "bonus": [
-            {
-                "month": "2026-02",
-                "bonus_weeks": 4
-            },
-            {
-                "month": "2026-03",
-                "bonus_weeks": 4
-            },
-            {
-                "month": "2026-04",
-                "bonus_weeks": 4
-            }
-        ]
-    },
-    "BumblinMumbler": {
-        "win_date": "2026-01-11",
-        "bonus": [
-            {
-                "month": "2026-02",
-                "bonus_weeks": 4
-            },
-            {
-                "month": "2026-03",
-                "bonus_weeks": 4
-            },
-            {
-                "month": "2026-04",
-                "bonus_weeks": 3
+                "month": "2026-05",
+                "bonus_weeks": 2
             }
         ]
     },
@@ -142,6 +78,10 @@
             {
                 "month": "2026-04",
                 "bonus_weeks": 4
+            },
+            {
+                "month": "2026-05",
+                "bonus_weeks": 3
             }
         ]
     },
@@ -177,6 +117,10 @@
             {
                 "month": "2026-03",
                 "bonus_weeks": 4
+            },
+            {
+                "month": "2026-05",
+                "bonus_weeks": 1
             }
         ]
     },
@@ -190,6 +134,10 @@
             {
                 "month": "2026-04",
                 "bonus_weeks": 4
+            },
+            {
+                "month": "2026-05",
+                "bonus_weeks": 3
             }
         ]
     },
@@ -208,6 +156,10 @@
             {
                 "month": "2026-04",
                 "bonus_weeks": 4
+            },
+            {
+                "month": "2026-05",
+                "bonus_weeks": 4
             }
         ]
     },
@@ -217,6 +169,10 @@
             {
                 "month": "2026-04",
                 "bonus_weeks": 4
+            },
+            {
+                "month": "2026-05",
+                "bonus_weeks": 4
             }
         ]
     },
@@ -225,6 +181,10 @@
         "bonus": [
             {
                 "month": "2026-04",
+                "bonus_weeks": 4
+            },
+            {
+                "month": "2026-05",
                 "bonus_weeks": 4
             }
         ]
@@ -239,6 +199,10 @@
             {
                 "month": "2026-04",
                 "bonus_weeks": 2
+            },
+            {
+                "month": "2026-05",
+                "bonus_weeks": 4
             }
         ]
     },
@@ -248,6 +212,10 @@
             {
                 "month": "2026-04",
                 "bonus_weeks": 3
+            },
+            {
+                "month": "2026-05",
+                "bonus_weeks": 4
             }
         ]
     },
@@ -256,6 +224,10 @@
         "bonus": [
             {
                 "month": "2026-04",
+                "bonus_weeks": 4
+            },
+            {
+                "month": "2026-05",
                 "bonus_weeks": 4
             }
         ]
@@ -266,35 +238,98 @@
             {
                 "month": "2026-04",
                 "bonus_weeks": 3
+            },
+            {
+                "month": "2026-05",
+                "bonus_weeks": 3
             }
         ]
     },
     "Matanza": {
         "win_date": "2026-04-09",
-        "bonus": []
+        "bonus": [
+            {
+                "month": "2026-05",
+                "bonus_weeks": 4
+            }
+        ]
     },
     "ViperX56": {
         "win_date": "2026-04-09",
-        "bonus": []
+        "bonus": [
+            {
+                "month": "2026-05",
+                "bonus_weeks": 4
+            }
+        ]
     },
     "Rious": {
         "win_date": "2026-04-09",
-        "bonus": []
+        "bonus": [
+            {
+                "month": "2026-05",
+                "bonus_weeks": 3
+            }
+        ]
     },
     "osiris8282": {
         "win_date": "2026-04-09",
-        "bonus": []
+        "bonus": [
+            {
+                "month": "2026-05",
+                "bonus_weeks": 1
+            }
+        ]
     },
     "beeche": {
         "win_date": "2026-04-09",
-        "bonus": []
+        "bonus": [
+            {
+                "month": "2026-05",
+                "bonus_weeks": 1
+            }
+        ]
     },
     "your mama": {
         "win_date": "2026-04-09",
-        "bonus": []
+        "bonus": [
+            {
+                "month": "2026-05",
+                "bonus_weeks": 4
+            }
+        ]
     },
     "redking": {
         "win_date": "2026-04-09",
+        "bonus": [
+            {
+                "month": "2026-05",
+                "bonus_weeks": 4
+            }
+        ]
+    },
+    "God Sukuna": {
+        "win_date": "2026-05-10",
+        "bonus": []
+    },
+    "Protips": {
+        "win_date": "2026-05-10",
+        "bonus": []
+    },
+    "CrazyWaveIT": {
+        "win_date": "2026-05-10",
+        "bonus": []
+    },
+    "DNG": {
+        "win_date": "2026-05-10",
+        "bonus": []
+    },
+    "Vojt": {
+        "win_date": "2026-05-10",
+        "bonus": []
+    },
+    "Dr. Stone": {
+        "win_date": "2026-05-10",
         "bonus": []
     }
 }
