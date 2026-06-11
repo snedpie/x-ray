@@ -1,17 +1,4 @@
 {
-    "ImagineWaggons": {
-        "win_date": "2025-11-10",
-        "bonus": [
-            {
-                "month": "2025-12",
-                "bonus_weeks": 1
-            },
-            {
-                "month": "2026-01",
-                "bonus_weeks": 0
-            }
-        ]
-    },
     "Apollo": {
         "win_date": "2025-12-11",
         "bonus": []
@@ -38,23 +25,6 @@
             }
         ]
     },
-    "RoyalOne": {
-        "win_date": "2026-01-11",
-        "bonus": [
-            {
-                "month": "2026-02",
-                "bonus_weeks": 2
-            },
-            {
-                "month": "2026-03",
-                "bonus_weeks": 2
-            },
-            {
-                "month": "2026-05",
-                "bonus_weeks": 2
-            }
-        ]
-    },
     "Genghis Khan": {
         "win_date": "2026-02-10",
         "bonus": [
@@ -65,36 +35,6 @@
             {
                 "month": "2026-04",
                 "bonus_weeks": 1
-            }
-        ]
-    },
-    "koshal": {
-        "win_date": "2026-02-10",
-        "bonus": [
-            {
-                "month": "2026-03",
-                "bonus_weeks": 4
-            },
-            {
-                "month": "2026-04",
-                "bonus_weeks": 4
-            },
-            {
-                "month": "2026-05",
-                "bonus_weeks": 3
-            }
-        ]
-    },
-    "\u00cd\u00e2mGr\u00f8\u00d8t": {
-        "win_date": "2026-02-10",
-        "bonus": [
-            {
-                "month": "2026-03",
-                "bonus_weeks": 4
-            },
-            {
-                "month": "2026-04",
-                "bonus_weeks": 4
             }
         ]
     },
@@ -124,23 +64,6 @@
             }
         ]
     },
-    "S4VAGE_B5": {
-        "win_date": "2026-02-10",
-        "bonus": [
-            {
-                "month": "2026-03",
-                "bonus_weeks": 4
-            },
-            {
-                "month": "2026-04",
-                "bonus_weeks": 4
-            },
-            {
-                "month": "2026-05",
-                "bonus_weeks": 3
-            }
-        ]
-    },
     "pg": {
         "win_date": "2026-02-10",
         "bonus": [
@@ -160,6 +83,10 @@
             {
                 "month": "2026-05",
                 "bonus_weeks": 4
+            },
+            {
+                "month": "2026-06",
+                "bonus_weeks": 4
             }
         ]
     },
@@ -173,6 +100,10 @@
             {
                 "month": "2026-05",
                 "bonus_weeks": 4
+            },
+            {
+                "month": "2026-06",
+                "bonus_weeks": 3
             }
         ]
     },
@@ -186,12 +117,21 @@
             {
                 "month": "2026-05",
                 "bonus_weeks": 4
+            },
+            {
+                "month": "2026-06",
+                "bonus_weeks": 4
             }
         ]
     },
     "skyeshade": {
         "win_date": "2026-03-12",
-        "bonus": []
+        "bonus": [
+            {
+                "month": "2026-06",
+                "bonus_weeks": 4
+            }
+        ]
     },
     "Smitty\u2122": {
         "win_date": "2026-03-12",
@@ -203,6 +143,10 @@
             {
                 "month": "2026-05",
                 "bonus_weeks": 4
+            },
+            {
+                "month": "2026-06",
+                "bonus_weeks": 2
             }
         ]
     },
@@ -215,6 +159,10 @@
             },
             {
                 "month": "2026-05",
+                "bonus_weeks": 4
+            },
+            {
+                "month": "2026-06",
                 "bonus_weeks": 4
             }
         ]
@@ -229,6 +177,10 @@
             {
                 "month": "2026-05",
                 "bonus_weeks": 4
+            },
+            {
+                "month": "2026-06",
+                "bonus_weeks": 3
             }
         ]
     },
@@ -241,6 +193,10 @@
             },
             {
                 "month": "2026-05",
+                "bonus_weeks": 3
+            },
+            {
+                "month": "2026-06",
                 "bonus_weeks": 3
             }
         ]
@@ -260,6 +216,10 @@
             {
                 "month": "2026-05",
                 "bonus_weeks": 4
+            },
+            {
+                "month": "2026-06",
+                "bonus_weeks": 3
             }
         ]
     },
@@ -269,6 +229,10 @@
             {
                 "month": "2026-05",
                 "bonus_weeks": 3
+            },
+            {
+                "month": "2026-06",
+                "bonus_weeks": 4
             }
         ]
     },
@@ -278,6 +242,10 @@
             {
                 "month": "2026-05",
                 "bonus_weeks": 1
+            },
+            {
+                "month": "2026-06",
+                "bonus_weeks": 3
             }
         ]
     },
@@ -287,6 +255,10 @@
             {
                 "month": "2026-05",
                 "bonus_weeks": 1
+            },
+            {
+                "month": "2026-06",
+                "bonus_weeks": 4
             }
         ]
     },
@@ -296,6 +268,10 @@
             {
                 "month": "2026-05",
                 "bonus_weeks": 4
+            },
+            {
+                "month": "2026-06",
+                "bonus_weeks": 3
             }
         ]
     },
@@ -304,6 +280,10 @@
         "bonus": [
             {
                 "month": "2026-05",
+                "bonus_weeks": 4
+            },
+            {
+                "month": "2026-06",
                 "bonus_weeks": 4
             }
         ]
@@ -314,22 +294,79 @@
     },
     "Protips": {
         "win_date": "2026-05-10",
-        "bonus": []
+        "bonus": [
+            {
+                "month": "2026-06",
+                "bonus_weeks": 4
+            }
+        ]
     },
     "CrazyWaveIT": {
         "win_date": "2026-05-10",
-        "bonus": []
+        "bonus": [
+            {
+                "month": "2026-06",
+                "bonus_weeks": 2
+            }
+        ]
     },
     "DNG": {
         "win_date": "2026-05-10",
-        "bonus": []
+        "bonus": [
+            {
+                "month": "2026-06",
+                "bonus_weeks": 4
+            }
+        ]
     },
     "Vojt": {
         "win_date": "2026-05-10",
-        "bonus": []
+        "bonus": [
+            {
+                "month": "2026-06",
+                "bonus_weeks": 4
+            }
+        ]
     },
     "Dr. Stone": {
         "win_date": "2026-05-10",
+        "bonus": [
+            {
+                "month": "2026-06",
+                "bonus_weeks": 4
+            }
+        ]
+    },
+    "\u00cd\u00e2mGr\u00f8\u00d8t": {
+        "win_date": "2026-06-10",
+        "bonus": []
+    },
+    "BumblinMumbler": {
+        "win_date": "2026-06-10",
+        "bonus": []
+    },
+    "AngelC": {
+        "win_date": "2026-06-10",
+        "bonus": []
+    },
+    "Welli": {
+        "win_date": "2026-06-10",
+        "bonus": []
+    },
+    "Paladin": {
+        "win_date": "2026-06-10",
+        "bonus": []
+    },
+    "Ratchet": {
+        "win_date": "2026-06-10",
+        "bonus": []
+    },
+    "RoyalOne": {
+        "win_date": "2026-06-10",
+        "bonus": []
+    },
+    "\u516d\u798f\u6751": {
+        "win_date": "2026-06-10",
         "bonus": []
     }
 }
